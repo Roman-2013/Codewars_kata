@@ -27,3 +27,16 @@ const calculateAge = (yearOfBirth, year) => {
     }
     return 'You were born this very year!'
 }
+
+//#3
+const  main =(verb, noun)=>{
+    return verb + noun
+}
+//#4
+function powersOfTwo(n){
+    let array=[]
+    for (let i = 0; i <= n; i++) {
+        array.push(2**i)
+    }
+    return array
+}
