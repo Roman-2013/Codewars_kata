@@ -40,3 +40,15 @@ function powersOfTwo(n){
     }
     return array
 }
+
+//5
+const   defineSuit=(card)=> {
+    const array=card.split('')
+    return array[card.length - 1] === '♠'
+        ? 'spades'
+        : array[card.length - 1] === '♦'
+            ? 'diamonds'
+            : array[card.length - 1] === '♥'
+                ? 'hearts'
+                : 'clubs'
+}
