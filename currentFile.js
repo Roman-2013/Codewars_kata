@@ -1,17 +1,16 @@
-
-
-console.log(calculateYears(1000, 0.05, 0.18, 1100))//14
-
-
-const  calculateYears=(principal, interest, tax, desired)=> {
-    let Y = 0
-    if(principal ===desired) return 0
-
-    for (let i = 0; principal <= desired; i++) {
-        let dohod = principal * interest
-        let procent = dohod * tax
-        principal += (dohod - procent)
-        Y += 1
+function distinct(a) {
+    let arr=[]
+    for (let i = 0; i < a.length; i++) {
+        let temp=a[i]
+        if(!arr.includes(temp)){
+            arr.push(temp)
+        }
     }
-    return Y
+    return arr
 }
+
+console.log(distinct([1, 2, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5]))//[1,2,3]
+
+// if (!object[temp]) {
+//     object.push( temp)
+// }

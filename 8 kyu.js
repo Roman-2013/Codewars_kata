@@ -52,3 +52,29 @@ const   defineSuit=(card)=> {
                 ? 'hearts'
                 : 'clubs'
 }
+
+//#6
+const multipleOfIndex = (array)  =>{
+    let Array=[]
+    if(array[0]===0){
+        Array.push(0)
+    }
+    for (let i = 0; i < array.length; i++) {
+        if(array[i]%i===0){
+            Array.push(array[i])
+        }
+    }
+    return Array
+}
+
+//#7
+function distinct(a) {
+    let arr=[]
+    for (let i = 0; i < a.length; i++) {
+        let temp=a[i]
+        if(!arr.includes(temp)){
+            arr.push(temp)
+        }
+    }
+    return arr
+}
