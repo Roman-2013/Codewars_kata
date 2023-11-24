@@ -1,5 +1,5 @@
 //#1
-const  sumOfDifferences=(arr)=> {
+const sumOfDifferences = (arr) => {
     if (!arr.length || arr.length === 1) {
         return 0
     }
@@ -29,21 +29,22 @@ const calculateAge = (yearOfBirth, year) => {
 }
 
 //#3
-const  main =(verb, noun)=>{
+const main = (verb, noun) => {
     return verb + noun
 }
+
 //#4
-function powersOfTwo(n){
-    let array=[]
+function powersOfTwo(n) {
+    let array = []
     for (let i = 0; i <= n; i++) {
-        array.push(2**i)
+        array.push(2 ** i)
     }
     return array
 }
 
 //5
-const   defineSuit=(card)=> {
-    const array=card.split('')
+const defineSuit = (card) => {
+    const array = card.split('')
     return array[card.length - 1] === '♠'
         ? 'spades'
         : array[card.length - 1] === '♦'
@@ -54,13 +55,13 @@ const   defineSuit=(card)=> {
 }
 
 //#6
-const multipleOfIndex = (array)  =>{
-    let Array=[]
-    if(array[0]===0){
+const multipleOfIndex = (array) => {
+    let Array = []
+    if (array[0] === 0) {
         Array.push(0)
     }
     for (let i = 0; i < array.length; i++) {
-        if(array[i]%i===0){
+        if (array[i] % i === 0) {
             Array.push(array[i])
         }
     }
@@ -69,12 +70,29 @@ const multipleOfIndex = (array)  =>{
 
 //#7
 function distinct(a) {
-    let arr=[]
+    let arr = []
     for (let i = 0; i < a.length; i++) {
-        let temp=a[i]
-        if(!arr.includes(temp)){
+        let temp = a[i]
+        if (!arr.includes(temp)) {
             arr.push(temp)
         }
     }
     return arr
 }
+
+//#8
+const sakuraFall = (v) => v <= 0 ? 0 : 400 / v
+
+//#9
+const mergeArrays = (arr1, arr2) => {
+    let res = []
+    if (arr1.length === 0 & arr2.length === 0) return []
+    let concatArray = [...arr1, ...arr2].sort((a, b) => a - b)
+    for (let i = 0; i < concatArray.length; i++) {
+        if (!res.includes(concatArray[i])) {
+            res.push(concatArray[i])
+        }
+    }
+    return res
+}
+

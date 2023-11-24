@@ -20,3 +20,20 @@ const  calculateYears=(principal, interest, tax, desired)=> {
     }
     return Y
 }
+
+//#3
+const  openOrSenior=(data)=>data.map((el)=> el[0]>=55 & el[1]>7? el='Senior': el='Open')
+
+//#4
+const solve = (s) => {
+    let countToLower = 0
+    let countToUpper = 0
+    for (let i = 0; i < s.length; i++) {
+        debugger
+        if (s[i] === s[i].toUpperCase()) countToUpper++
+        if (s[i] === s[i].toLowerCase()) countToLower++
+    }
+    return countToLower >= countToUpper
+        ? s.toLowerCase()
+        : s.toUpperCase()
+}
