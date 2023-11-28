@@ -96,3 +96,13 @@ const mergeArrays = (arr1, arr2) => {
     return res
 }
 
+//#10
+function toBinary(n) {
+    let res = ''
+    while (n > 0) {
+        res=n%2+res
+        n = Math.floor(n / 2)
+    }
+    return +res
+}
+

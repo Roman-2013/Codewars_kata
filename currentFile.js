@@ -1,14 +1,10 @@
-const solve = (s) => {
-    let countToLower = 0
-    let countToUpper = 0
-    for (let i = 0; i < s.length; i++) {
-debugger
-        if (s[i] === s[i].toUpperCase()) countToUpper++
-        if (s[i] === s[i].toLowerCase()) countToLower++
-    }
-    return countToLower >= countToUpper
-        ? s.toLowerCase()
-        : s.toUpperCase()
+const  likes=(names)=> {
+if(names.length===0) return `no one likes this`
+if(names.length===1) return `${names[0]} likes this`
+if(names.length===2) return `${names[0]} and ${names[1]} like this`
+if(names.length===3) return `${names[0]}, ${names[1]} and ${names[2]} like this`
+if(names.length>3) return `${names[0]}, ${names[1]} and ${names.length-2} others like this`
 }
 
-console.log(solve('CODe'))//"CODE"
+
+console.log(likes(['Max', 'John', 'Mark']))
