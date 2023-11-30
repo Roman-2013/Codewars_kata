@@ -37,3 +37,6 @@ const solve = (s) => {
         ? s.toLowerCase()
         : s.toUpperCase()
 }
+
+//#5
+const  filter_list=(l)=>  l.filter(el=>typeof el==='number')
