@@ -40,3 +40,14 @@ const solve = (s) => {
 
 //#5
 const  filter_list=(l)=>  l.filter(el=>typeof el==='number')
+
+//#6
+const findShort = (s) => {
+    let res = 100
+    s.split(' ').forEach(el => {
+        el.length < res
+            ? res = el.length
+            : ''
+    })
+    return res
+}

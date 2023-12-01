@@ -1,4 +1,11 @@
-const  getSize=(a, b, c)=>[2*(a*b+a*c+c*b),a*b*c]
+const findShort = (s) => {
+    let res = 100
+    s.split(' ').forEach(el => {
+        el.length < res
+            ? res = el.length
+            : ''
+    })
+    return res
+}
 
-
-console.log(getSize(4, 2, 6))
+console.log(findShort('bitcoin take over the world maybe who knows perhaps'))//3

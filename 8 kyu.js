@@ -112,3 +112,9 @@ const  typeValidation=(variable, type) =>typeof variable === type
 
 //#12
 const  getSize=(a, b, c)=>[2*(a*b+a*c+c*b),a*b*c]
+
+//#13
+const  seatsInTheater=(nCols, nRows, col, row)=> (nCols-(col-1))*(nRows-row)
+
+//#14
+const  include=(arr, item)=>arr.includes(item)
