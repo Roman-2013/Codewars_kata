@@ -118,3 +118,18 @@ const  seatsInTheater=(nCols, nRows, col, row)=> (nCols-(col-1))*(nRows-row)
 
 //#14
 const  include=(arr, item)=>arr.includes(item)
+
+//#15
+function whoseMove(lastPlayer, win) {
+    if(lastPlayer==="white"){
+        return win
+            ? "white"
+            : "black"
+    }
+    if(lastPlayer==="black"){
+        return win
+            ? "black"
+            : "white"
+    }
+
+}

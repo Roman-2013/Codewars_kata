@@ -51,3 +51,8 @@ const findShort = (s) => {
     })
     return res
 }
+
+//#7
+function largestPairSum (numbers) {
+    return numbers.sort((a,b)=>b-a)[0]+numbers[1]
+}

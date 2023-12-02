@@ -1,11 +1,10 @@
-const findShort = (s) => {
-    let res = 100
-    s.split(' ').forEach(el => {
-        el.length < res
-            ? res = el.length
-            : ''
-    })
-    return res
+function largestPairSum (numbers) {
+    return numbers.sort((a,b)=>b-a)[0]+numbers[1]
 }
 
-console.log(findShort('bitcoin take over the world maybe who knows perhaps'))//3
+console.log(largestPairSum([10,14,2,23,19]))//42
+
+function largestPairSum (numbers) {
+    let sort=numbers.sort((a,b)=>b-a)
+    return sort[0]+sort[1]
+}
