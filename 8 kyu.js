@@ -133,3 +133,10 @@ function whoseMove(lastPlayer, win) {
     }
 
 }
+
+//#16
+const  array=(string) =>string.split(',').length<=2
+    ? null
+    : string.split(',').filter((el,index,array)=>index !==0 & index !==array.length-1).join(' ')
+
+

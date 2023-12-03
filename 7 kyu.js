@@ -56,3 +56,13 @@ const findShort = (s) => {
 function largestPairSum (numbers) {
     return numbers.sort((a,b)=>b-a)[0]+numbers[1]
 }
+
+//#8
+function sumDigits(number) {
+    let str=Math.abs(number).toString().split('')
+    let sum=0
+    str.map(el=>{
+        sum += Number(el)
+    })
+    return sum
+}

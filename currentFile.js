@@ -1,10 +1,10 @@
-function largestPairSum (numbers) {
-    return numbers.sort((a,b)=>b-a)[0]+numbers[1]
+function sumDigits(number) {
+    let str=Math.abs(number).toString().split('')
+ let sum=0
+    str.map(el=>{
+        sum += Number(el)
+    })
+    return sum
 }
 
-console.log(largestPairSum([10,14,2,23,19]))//42
-
-function largestPairSum (numbers) {
-    let sort=numbers.sort((a,b)=>b-a)
-    return sort[0]+sort[1]
-}
+console.log(sumDigits(827))
