@@ -140,3 +140,13 @@ const  array=(string) =>string.split(',').length<=2
     : string.split(',').filter((el,index,array)=>index !==0 & index !==array.length-1).join(' ')
 
 
+//#17
+function ensureQuestion(s) {
+    let array = s.split('')
+    if (array[array.length - 1] === '?') {
+        return s
+    } else {
+        array.push('?')
+        return array.join('')
+    }
+}

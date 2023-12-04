@@ -1,10 +1,9 @@
-function sumDigits(number) {
-    let str=Math.abs(number).toString().split('')
- let sum=0
-    str.map(el=>{
-        sum += Number(el)
-    })
-    return sum
+const isSquare = (n) => {
+    for (let i = 0; i*i <= n; i++) {
+        if(i*i===n)return true
+    }
+    return  false
 }
 
-console.log(sumDigits(827))
+
+console.log(isSquare(25))//true
