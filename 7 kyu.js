@@ -74,3 +74,10 @@ const isSquare = (n) => {
     }
     return  false
 }
+
+
+//#10
+const  min=(arr, toReturn) =>toReturn === 'value'? Math.min(...arr):arr.findIndex(el =>el=== Math.min(...arr))
+
+//#11
+const predictAge=(...res)=>Math.floor( Math.sqrt([...res].reduce((accum,current)=> accum+(current*current),0))/2)
