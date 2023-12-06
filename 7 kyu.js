@@ -81,3 +81,34 @@ const  min=(arr, toReturn) =>toReturn === 'value'? Math.min(...arr):arr.findInde
 
 //#11
 const predictAge=(...res)=>Math.floor( Math.sqrt([...res].reduce((accum,current)=> accum+(current*current),0))/2)
+
+//#12
+function repeats(arr) {
+    let obj={}
+    for (let i = 0; i < arr.length; i++) {
+        if(obj[arr[i]]===1){
+            delete obj[arr[i]]
+        }else{
+            obj[arr[i]]=1
+        }
+    }
+    let sum=0
+    for (let key in obj){
+        sum+=Number(key)
+    }
+    return sum
+}
+
+//#13
+const  sortItOut=(array)=>{
+    const even=[]
+    const odd=[]
+    for (let i = 0; i < array.length; i++) {
+        if(Math.floor(array[i])%2===0){
+            even.push(array[i])
+        }else {
+            odd.push(array[i])
+        }
+    }
+    return [...odd.sort((a,b)=>a-b),...even.sort((a,b)=>b-a)]
+}
