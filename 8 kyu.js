@@ -150,3 +150,8 @@ function ensureQuestion(s) {
         return array.join('')
     }
 }
+
+//#18
+function spEng(sentence){
+    return sentence.toLowerCase().indexOf('english')!==-1
+}

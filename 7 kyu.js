@@ -112,3 +112,9 @@ const  sortItOut=(array)=>{
     }
     return [...odd.sort((a,b)=>a-b),...even.sort((a,b)=>b-a)]
 }
+
+//#14
+const  decode=(string)=> {
+    const dec={4:6,6:4,5:0,0:5,1:9,9:1,2:8,8:2,3:7,7:3}
+    return string.split('').map(el=>el=dec[el]).join('')
+}
