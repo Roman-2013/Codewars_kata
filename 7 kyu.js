@@ -118,3 +118,26 @@ const  decode=(string)=> {
     const dec={4:6,6:4,5:0,0:5,1:9,9:1,2:8,8:2,3:7,7:3}
     return string.split('').map(el=>el=dec[el]).join('')
 }
+
+//#15
+function rowSumOddNumbers(n) {
+    let obj={}
+    for (let i = 1; i <=n ; i++) {
+
+        obj[i]=[]
+    }
+    let temp=0
+    for (let i = 1; n > obj[n].length ; i++) {
+        for (let j = temp; i > obj[i].length; j++) {
+            temp+=1
+            if(j%2!==0){
+
+                obj[i].push(j)
+            }
+        }
+    }
+    return obj[n].reduce((acc,val)=>acc+val,0)
+}
+
+//#16
+const wordsToMarks=(string)=>string.split('').reduce((acc,value)=>acc+value.charCodeAt(0)-96,0)

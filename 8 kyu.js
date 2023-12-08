@@ -155,3 +155,7 @@ function ensureQuestion(s) {
 function spEng(sentence){
     return sentence.toLowerCase().indexOf('english')!==-1
 }
+
+
+//#19
+const betterThanAverage=(classPoints, yourPoints)=> classPoints.reduce((acc,value)=>acc+value,0)/classPoints.length<yourPoints
