@@ -1,42 +1,10 @@
-// function wordsToMarks(string){
-//     const alphabet = {
-//         A: 1,
-//         B: 2,
-//         C: 3,
-//         D: 4,
-//         E: 5,
-//         F: 6,
-//         G: 7,
-//         H: 8,
-//         I: 9,
-//         J: 10,
-//         K: 11,
-//         L: 12,
-//         M: 13,
-//         N: 14,
-//         O: 15,
-//         P: 16,
-//         Q: 17,
-//         R: 18,
-//         S: 19,
-//         T: 20,
-//         U: 21,
-//         V: 22,
-//         W: 23,
-//         X: 24,
-//         Y: 25,
-//         Z: 26
-//     };
-//
-//     let res=0
-//     for (let i = 0; i <=string.length-1 ; i++) {
-//         res+=alphabet[string[i].toUpperCase()]
-//     }
-// return res
-// }
+const  chromosomeCheck=(sperm)=> sperm.indexOf('Y')===-1
+?"Congratulations! You're going to have a daughter."
+    :"Congratulations! You're going to have a son."
 
-//97-120
 
-const wordsToMarks=(string)=>string.split('').reduce((acc,value)=>acc+value.charCodeAt(0)-96,0)
 
-console.log(wordsToMarks("attitude"))//100
+console.log(chromosomeCheck('XY'))//"Congratulations! You're going to have a son."
+
+let a ='XY'
+console.log(a.indexOf('v'))

@@ -159,3 +159,8 @@ function spEng(sentence){
 
 //#19
 const betterThanAverage=(classPoints, yourPoints)=> classPoints.reduce((acc,value)=>acc+value,0)/classPoints.length<yourPoints
+
+//#20
+const  chromosomeCheck=(sperm)=> sperm.indexOf('Y')===-1
+    ?"Congratulations! You're going to have a daughter."
+    :"Congratulations! You're going to have a son."

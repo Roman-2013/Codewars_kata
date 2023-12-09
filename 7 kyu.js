@@ -141,3 +141,22 @@ function rowSumOddNumbers(n) {
 
 //#16
 const wordsToMarks=(string)=>string.split('').reduce((acc,value)=>acc+value.charCodeAt(0)-96,0)
+
+//#17
+function removeSmallest(a) {
+    let number=a.indexOf(Math.min(...a))
+    return a.filter((el,index)=>index!==number)
+}
+
+//#18
+const  minValue=(values)=>{
+    let sortArray= values.sort((a,b)=>a-b)
+    let resArray=[]
+    for (let i = 0; i < sortArray.length ; i++) {
+        if(sortArray[i] !==sortArray[i+1]){
+            resArray.push(sortArray[i])
+        }
+    }
+    return +resArray.join('')
+
+}
