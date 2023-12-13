@@ -160,3 +160,26 @@ const  minValue=(values)=>{
     return +resArray.join('')
 
 }
+
+//#19
+const  isLeapYear=(year)=> {
+    if(year%100===0){
+        if (year%400===0){
+            return true
+        }
+        return false
+    }
+    if(year%4===0) return true
+    return false
+}
+//#20
+const  longest=(s1, s2)=> {
+    let str=[]
+    const array=[...s1.split(''),...s2.split('')]
+    for (let i = 0; i < array.length; i++) {
+        if(str.includes(array[i])!==true){
+            str.push(array[i])
+        }
+    }
+    return str.sort().join('')
+}

@@ -185,3 +185,6 @@ function validateHello(greetings) {
         return false
     }
 }
+
+//#22
+const  hexToDec=(hex)=>parseInt(hex,16)
