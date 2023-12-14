@@ -183,3 +183,10 @@ const  longest=(s1, s2)=> {
     }
     return str.sort().join('')
 }
+
+//#21
+const  reverseMiddle=(array)=>array.length%2===0
+    ?array.slice(array.length/2-1,array.length/2+1).reverse()
+    :  array.slice(array.length/2-1,array.length/2+2).reverse()
+
+
