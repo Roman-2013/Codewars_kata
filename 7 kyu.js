@@ -190,3 +190,10 @@ const  reverseMiddle=(array)=>array.length%2===0
     :  array.slice(array.length/2-1,array.length/2+2).reverse()
 
 
+//#22
+function factorial(n){
+    if(n<=1){
+        return 1
+    }
+    return factorial(n-1)*n
+}

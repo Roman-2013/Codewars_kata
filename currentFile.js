@@ -1,17 +1,15 @@
-const  findOdd=(A)=> {
-    const obj = {}
-    for (let i = 0; i < A.length; i++) {
-        if (!obj[A[i]]) {
-            obj[A[i]] = 1
-        } else {
-            obj[A[i]] += 1
+const multiplicationTable=(size)=> {
+const resArray=[]
+    for (let i = 1; i <=size ; i++) {
+        let arr=[]
+        resArray.push(arr)
+        for (let j = 1; j <=size ; j++) {
+            arr.push(j*i)
+
         }
     }
-    for (let key in obj) {
-        if (obj[key] % 2 !== 0)
-            return +key
-    }
+return resArray
 }
 
 
-console.log(findOdd([7]))//2
+console.log(multiplicationTable(3))

@@ -188,3 +188,16 @@ function validateHello(greetings) {
 
 //#22
 const  hexToDec=(hex)=>parseInt(hex,16)
+
+//#23
+function apple(x){
+    return Number (x)**2>1000
+        ?'It\'s hotter than the sun!!'
+        :'Help yourself to a honeycomb Yorkie for the glovebox.'
+}
+
+//#24
+function strCount(str, letter){
+    let res=str.split('').filter((el)=>el===letter)
+    return res.length
+}

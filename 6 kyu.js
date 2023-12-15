@@ -42,3 +42,30 @@ const  findOdd=(A)=> {
             return +key
     }
 }
+
+//#5
+const deleteNth = (arr, n) => {
+    const resArray = []
+    for (let i = 0; i < arr.length; i++) {
+        let temp = resArray.filter(el => el === arr[i])
+        if (temp.length < n) {
+            resArray.push(arr[i])
+        }
+    }
+    return resArray
+}
+
+
+//#6
+const multiplicationTable=(size)=> {
+    const resArray=[]
+    for (let i = 1; i <=size ; i++) {
+        let arr=[]
+        resArray.push(arr)
+        for (let j = 1; j <=size ; j++) {
+            arr.push(j*i)
+
+        }
+    }
+    return resArray
+}
