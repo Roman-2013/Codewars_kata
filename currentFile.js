@@ -1,15 +1,8 @@
-const multiplicationTable=(size)=> {
-const resArray=[]
-    for (let i = 1; i <=size ; i++) {
-        let arr=[]
-        resArray.push(arr)
-        for (let j = 1; j <=size ; j++) {
-            arr.push(j*i)
+function replace(s){
+    //coding and coding....
+    return s.replace(/[aeiou]/gi,'!')
 
-        }
-    }
-return resArray
+
 }
 
-
-console.log(multiplicationTable(3))
+console.log(replace('Hhaa'))//H!

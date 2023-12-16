@@ -201,3 +201,11 @@ function strCount(str, letter){
     let res=str.split('').filter((el)=>el===letter)
     return res.length
 }
+
+//#25
+function replace(s){
+    //coding and coding....
+    return s.replace(/[aeiou]/gi,'!')
+
+
+}
