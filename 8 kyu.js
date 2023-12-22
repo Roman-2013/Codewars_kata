@@ -209,3 +209,18 @@ function replace(s){
 
 
 }
+
+//#26
+function peopleWithAgeDrink(old) {
+    const name=old
+    switch (true){
+        case old<14 :
+            return "drink toddy"
+        case old<18:
+            return "drink coke"
+        case old<21:
+            return "drink beer"
+        default:
+            return "drink whisky"
+    }
+};

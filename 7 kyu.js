@@ -197,3 +197,10 @@ function factorial(n){
     }
     return factorial(n-1)*n
 }
+
+//#23
+const  candies=(kids)=> {
+    if (kids.length <= 1) return -1
+    const max = Math.max(...kids)
+    return kids.reduce((acc,value)=>acc+(max-value),0)
+}
