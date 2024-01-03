@@ -204,3 +204,18 @@ const  candies=(kids)=> {
     const max = Math.max(...kids)
     return kids.reduce((acc,value)=>acc+(max-value),0)
 }
+
+//#24
+const  isTriangle=(a,b,c)=> {
+    return  a <= 0 || b <= 0 || c <= 0
+        ? false
+        : !(a + b <= c || b + c <= a || c + a <= b)
+}
+
+//#25
+String.prototype.toJadenCase = function () {
+    let array=this.split(' ')
+    let a= array.map((el)=>[el[0].toUpperCase(), el.slice(1)])
+    return a.map(el=>el.join('')).join(' ')
+}
+

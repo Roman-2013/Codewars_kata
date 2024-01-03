@@ -1,19 +1,13 @@
-function findUniq(arr) {
-    let currentValue = {}
-    for (let i = 0; i < arr.length; i++) {
-        if (!currentValue[arr[i]]) {
-            currentValue[arr[i]] = 1
-            console.log('dsf')
-        }else {
-            currentValue[arr[i]] +=1
-        }
+String.prototype.toJadenCase = function () {
+    let array=this.split(' ')
+    let a= array.map((el)=>[el[0].toUpperCase(), el.slice(1)])
+return a.map(el=>el.join('')).join(' ')
 
-    }
-    for (let key in currentValue ){
-        if(currentValue[key]===1){
-            return +key
-        }
-    }
+
 }
 
-console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]))//1
+
+let str = "How can mirrors be real if our eyes aren't real";
+
+console.log(str.toJadenCase())//, "How Can Mirrors Be Real If Our Eyes Aren't Real");
+
