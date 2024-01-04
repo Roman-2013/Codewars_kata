@@ -1,13 +1,11 @@
-String.prototype.toJadenCase = function () {
-    let array=this.split(' ')
-    let a= array.map((el)=>[el[0].toUpperCase(), el.slice(1)])
-return a.map(el=>el.join('')).join(' ')
-
+function nbDig(n, d) {
+let res=0
+    for (let i = 0; i <=n ; i++) {
+let number=i**2
+        number.toString().split('').map(el=>Number(el)===d?res+=1:'')
+    }
+return res
 
 }
 
-
-let str = "How can mirrors be real if our eyes aren't real";
-
-console.log(str.toJadenCase())//, "How Can Mirrors Be Real If Our Eyes Aren't Real");
-
+console.log(nbDig(5750, 0))//4700

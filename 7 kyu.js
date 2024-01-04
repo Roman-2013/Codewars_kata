@@ -219,3 +219,25 @@ String.prototype.toJadenCase = function () {
     return a.map(el=>el.join('')).join(' ')
 }
 
+//#26
+function getDivisorsCnt(n){
+    let result=0
+    for (let i = 1; i <=Math.sqrt(n) ; i++) {
+        debugger
+        if(n%i===0){
+            result+=(i===n/i)?1:2
+        }
+    }
+    return result
+}
+
+//#27
+function nbDig(n, d) {
+    let res=0
+    for (let i = 0; i <=n ; i++) {
+        let number=i**2
+        number.toString().split('').map(el=>Number(el)===d?res+=1:'')
+    }
+    return res
+
+}
