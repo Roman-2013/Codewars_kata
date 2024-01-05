@@ -224,3 +224,8 @@ function peopleWithAgeDrink(old) {
             return "drink whisky"
     }
 };
+
+//#27
+function toCsvText(array) {
+    return array.join('\n')
+}

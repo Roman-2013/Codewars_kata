@@ -1,16 +1,18 @@
-function barista(coffees) {
-    const sort = coffees.sort((a, b) => a - b)
-    let accum = 0
-    for (let i = 1; i <= coffees.length; i++) {
-        if (i === 1) {
-            accum += sort[0]
-        } else {
-            accum += sort.slice(0, i).reduce((el, acc) => el + acc, 0) + (2 * (i - 1))
+function evaporator(content, evap_per_day, threshold){
+    let day=0
+    const ProcentGlobal=(content*threshold)/100
+    const fun=(content,evap_per_day)=>{
+        if(content<ProcentGlobal){
+            return
         }
+            day++
+        let procent=(content*evap_per_day)/100
+        let newContent=content-procent
+        return fun(newContent,evap_per_day)
     }
-    return accum
+    fun(content,evap_per_day)
+    return day
 }
 
+console.log(evaporator(10, 10, 5))//29
 
-console.log(barista([5, 4, 3, 2, 1]))//55
-//2,3,4
