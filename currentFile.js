@@ -1,18 +1,38 @@
-function evaporator(content, evap_per_day, threshold){
-    let day=0
-    const ProcentGlobal=(content*threshold)/100
-    const fun=(content,evap_per_day)=>{
-        if(content<ProcentGlobal){
-            return
-        }
-            day++
-        let procent=(content*evap_per_day)/100
-        let newContent=content-procent
-        return fun(newContent,evap_per_day)
+const alphabetWar=(fight)=>{
+    const Left={
+        w : 4,
+        p : 3,
+        b : 2,
+        s : 1
     }
-    fun(content,evap_per_day)
-    return day
+    const Right={
+        m : 4,
+        q : 3,
+        d : 2,
+        z : 1
+    }
+    let L=[]
+    let LCount=0
+    let R=[]
+    let RCount=0
+    for (let i = 0; i <fight.length ; i++) {
+        if(fight[i]==='w'||fight[i]==='p'||fight[i]==='b'||fight[i]==='s'){
+            L.push(fight[i])
+        }else if (fight[i]==='m'||fight[i]==='q'||fight[i]==='d'||fight[i]==='z') {
+            R.push(fight[i])
+        }
+    }
+    for(let key of L){
+        LCount+=Left[key]
+    }
+    for(let key of R){
+        RCount+=Right[key]
+    }
+
+    return LCount>RCount?'Left side wins!':LCount===RCount?"Let's fight again!":"Right side wins!"
 }
 
-console.log(evaporator(10, 10, 5))//29
+
+
+console.log(alphabetWar('dzdtyhiww'))// "Let's fight again!"
 
