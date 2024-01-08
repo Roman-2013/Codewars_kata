@@ -1,38 +1,18 @@
-const alphabetWar=(fight)=>{
-    const Left={
-        w : 4,
-        p : 3,
-        b : 2,
-        s : 1
+function reduce(fraction) {
+
+let arr1=[]
+let arr2=[]
+    for (let i = 1; i <=Math.max(...fraction) ; i++) {
+
+        if(fraction[0]%i===0)arr1.push(i)
+        if(fraction[1]%i===0)arr2.push(i)
     }
-    const Right={
-        m : 4,
-        q : 3,
-        d : 2,
-        z : 1
-    }
-    let L=[]
-    let LCount=0
-    let R=[]
-    let RCount=0
-    for (let i = 0; i <fight.length ; i++) {
-        if(fight[i]==='w'||fight[i]==='p'||fight[i]==='b'||fight[i]==='s'){
-            L.push(fight[i])
-        }else if (fight[i]==='m'||fight[i]==='q'||fight[i]==='d'||fight[i]==='z') {
-            R.push(fight[i])
-        }
-    }
-    for(let key of L){
-        LCount+=Left[key]
-    }
-    for(let key of R){
-        RCount+=Right[key]
+    const array=[...arr2,...arr1].sort((a,b)=>b-a)
+    const number=  array.find(el=>fraction[0]%el===0&&fraction[1]%el===0)
+    return [fraction[0]/number,fraction[1]/number]
     }
 
-    return LCount>RCount?'Left side wins!':LCount===RCount?"Let's fight again!":"Right side wins!"
-}
 
+console.log(reduce([1,1]))
 
-
-console.log(alphabetWar('dzdtyhiww'))// "Let's fight again!"
 
