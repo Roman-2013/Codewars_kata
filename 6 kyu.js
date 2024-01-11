@@ -89,3 +89,17 @@ function findUniq(arr) {
         }
     }
 }
+
+//#8
+function countSmileys(arr) {
+    if(arr.length===0){
+        return 0
+    }
+    let counter=0
+    arr.map(el=>{
+        if(el===':D'||el===':~)'||el===';~D'||el===':)'||el===';-D'||el===':-D'||el===';)'||el===';~)'||el===':-)'||el===';D'||el===';-)'||el===':~D'){
+            counter+=1
+        }
+    })
+    return  counter
+}

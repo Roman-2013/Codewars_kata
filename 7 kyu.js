@@ -331,3 +331,23 @@ function reduce(fraction) {
     const number=  array.find(el=>fraction[0]%el===0&&fraction[1]%el===0)
     return [fraction[0]/number,fraction[1]/number]
 }
+
+//#33
+function nameFile(fmt, nbr, start) {
+    if(start%1!==0 ||nbr%1!==0||nbr<=0 ){
+        return []
+    }
+
+    const value=/<index_no>/g
+    const result=[]
+    for (let i = 0; i <nbr ; i++) {
+        result.push(fmt.replace(value,start+i))
+    }
+    return  result
+}
+
+//#34
+function addBinary(a,b) {
+    const sum=a+b
+    return sum.toString(2)
+}

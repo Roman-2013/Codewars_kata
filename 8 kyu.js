@@ -246,3 +246,14 @@ function sum (numbers) {
     return numbers.reduce((acc,ell)=>ell+acc,0)
 
 };
+
+//#30
+function pillars(numPill, dist, width) {
+    if(numPill<2){
+        return 0
+    }else  if(numPill===2){
+        return dist*100
+    }else {
+        return dist*(numPill-1)*100+width*(numPill-2)
+    }
+}
