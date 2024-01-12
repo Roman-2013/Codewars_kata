@@ -351,3 +351,17 @@ function addBinary(a,b) {
     const sum=a+b
     return sum.toString(2)
 }
+
+//#35
+function nbYear(p0, percent, aug, p,year=0) {
+    console.log(p0, percent, aug, p,year)
+
+    if (p0 >= p) {
+        return year
+    }
+    ++year
+    const people=Math.floor(p0+p0*(percent/100)+aug)
+    return nbYear(people,percent,aug,p,year)
+
+}
+

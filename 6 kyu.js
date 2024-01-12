@@ -103,3 +103,45 @@ function countSmileys(arr) {
     })
     return  counter
 }
+
+//#9
+function duplicateCount(text){
+    const textLowerCaseArray=text.toLowerCase().split('')
+    let res={}
+    for (let i = 0; i <textLowerCaseArray.length ; i++) {
+        if(res[textLowerCaseArray[i]]){
+            res[textLowerCaseArray[i]]+=1
+        }else {
+            res[textLowerCaseArray[i]]=1
+        }
+    }
+    let count=0
+    for (let el in res){
+        if(res[el]>1){
+            count+=1
+        }
+    }
+    return count
+}
+
+//#10
+function solve(s) {
+    const array=s.split(/[aeiou]/g)
+    let res={}
+
+    for (let i = 0; i <array.length ; i++) {
+        if (array[i].length===0){
+            res[i]=0
+        }else if(array[i].length===1){
+            res[i]= array[i].charCodeAt()-96
+        }else {
+            res[i]= array[i].split('').reduce((acc,el)=>acc+el.charCodeAt()-96,0)
+        }
+    }
+    let arr=[]
+    for(let el in res){
+        arr.push(res[el])
+    }
+    return Math.max(...arr)
+
+}
