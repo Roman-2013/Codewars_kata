@@ -364,4 +364,16 @@ function nbYear(p0, percent, aug, p,year=0) {
     return nbYear(people,percent,aug,p,year)
 
 }
+//#36
+const inviteMoreWomen=(L) =>0< L.reduce((acc,el)=>acc+el,0)
 
+
+//#37
+var capitals = function (word) {
+    const arr=word.split('')
+    const res=[]
+    arr.map((el,i)=>{
+        if( el===el.toUpperCase()) res.push( i)
+    })
+    return res
+};
