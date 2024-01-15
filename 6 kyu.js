@@ -145,3 +145,21 @@ function solve(s) {
     return Math.max(...arr)
 
 }
+
+//#11
+function additionWithoutCarrying(a,b) {
+    const numberA = a.toString().split('').reverse()
+    const numberB = b.toString().split('').reverse()
+    let res = []
+    let arr=[]
+    let length = Math.max(numberA.length, numberB.length)
+    for (let i = 0; i <= length - 1; i++) {
+        res.push((Number(numberA[i]) || 0) + (Number(numberB[i]) || 0))
+    }
+    for (let key of res){
+        // if(key.toString().length>0){
+        arr.push( key.toString()[1]|| key.toString()[0])
+    }
+    return +arr.reverse().join('')
+
+}
