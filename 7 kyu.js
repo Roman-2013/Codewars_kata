@@ -377,3 +377,9 @@ var capitals = function (word) {
     })
     return res
 };
+
+//#38
+function descendingOrder(n) {
+    let arr = n.toString().split('').sort((a,b)=>b-a)
+    return +arr.join('')
+}

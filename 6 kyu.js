@@ -163,3 +163,23 @@ function additionWithoutCarrying(a,b) {
     return +arr.reverse().join('')
 
 }
+
+//#12
+function sortArray(array) {
+    const arrOdd=[]
+    const arrEven=array
+    for (let i = 0; i <array.length ; i++) {
+        if(array[i]%2!==0){
+            arrOdd.push(array[i])
+            array[i]=null
+        }
+    }
+    const sortArrOdd=arrOdd.sort((a,b)=>a-b)
+    return arrEven.map((el,i,array)=>{
+        if(el===null){
+            return el=sortArrOdd.shift()
+        }else {
+            return  el
+        }
+    })
+}

@@ -257,3 +257,17 @@ function pillars(numPill, dist, width) {
         return dist*(numPill-1)*100+width*(numPill-2)
     }
 }
+
+//#31
+function all( arr, fun ) {
+    console.log(arr)
+    let res=true
+    for (let i = 0; i <arr.length ; i++) {
+        if(!fun(arr[i])){
+            res=false
+        }else{
+            res=true
+        }
+    }
+    return  res
+}

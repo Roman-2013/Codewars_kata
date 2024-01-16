@@ -1,26 +1,22 @@
-function additionWithoutCarrying(a,b) {
-    const numberA = a.toString().split('').reverse()
-    const numberB = b.toString().split('').reverse()
-
-    let res = []
-    let arr=[]
-    let length = Math.max(numberA.length, numberB.length)
-    for (let i = 0; i <= length - 1; i++) {
-        res.push((Number(numberA[i]) || 0) + (Number(numberB[i]) || 0))
-    }
-    // const res2 = res.map(el => el.toString().split())
-    //
-    //
-    for (let key of res){
-        // if(key.toString().length>0){
-        arr.push( key.toString()[1]|| key.toString()[0])
+function sortArray(array) {
+    console.log(array)
+const arrOdd=[]
+const arrEven=array
+    for (let i = 0; i <array.length ; i++) {
+        if(array[i]%2!==0){
+            arrOdd.push(array[i])
+           array[i]=null
         }
-
-
-return +arr.reverse().join('')
-
+    }
+    console.log(arrEven)
+const sortArrOdd=arrOdd.sort((a,b)=>a-b)
+return arrEven.map((el,i,array)=>{
+   if(el===null){
+       return el=sortArrOdd.shift()
+   }else {
+       return  el
+   }
+})
 }
 
-
-console.log(additionWithoutCarrying(99999,0))//9999
-console.log(additionWithoutCarrying(999,999))//8880
+console.log(sortArray([0, 1, 2, 3, 4, 9, 8, 7, 6, 5]))//[1, 3, 2, 8, 5, 4]
