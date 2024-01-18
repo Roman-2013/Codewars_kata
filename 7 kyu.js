@@ -383,3 +383,18 @@ function descendingOrder(n) {
     let arr = n.toString().split('').sort((a,b)=>b-a)
     return +arr.join('')
 }
+
+//#39
+function seaSick(x){
+    const arr=x.split('')
+    if(arr.length===1){
+        return "No Problem"
+    }
+    let count=0
+    for (let i = 0; i < arr.length-1; i++) {
+        if(arr[i]!==arr[i+1]){
+            count++
+        }
+    }
+    return arr.length*20/100<count?"Throw Up":"No Problem"
+}

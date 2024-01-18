@@ -1,22 +1,16 @@
-function sortArray(array) {
-    console.log(array)
-const arrOdd=[]
-const arrEven=array
-    for (let i = 0; i <array.length ; i++) {
-        if(array[i]%2!==0){
-            arrOdd.push(array[i])
-           array[i]=null
+function beginning(xs) {
+    const arr = xs.split('')
+    let res = [+arr[0]]
+    for (let i = 1; i < arr.length; i++) {
+        if (Number(res.join(''))+1 === +arr.splice(i, i)) {
+            return res
+        }else {
+            res.push(arr[i+1])
         }
     }
-    console.log(arrEven)
-const sortArrOdd=arrOdd.sort((a,b)=>a-b)
-return arrEven.map((el,i,array)=>{
-   if(el===null){
-       return el=sortArrOdd.shift()
-   }else {
-       return  el
-   }
-})
+    console.log(arr.splice(1, 1))
+
 }
 
-console.log(sortArray([0, 1, 2, 3, 4, 9, 8, 7, 6, 5]))//[1, 3, 2, 8, 5, 4]
+console.log(beginning('123456789101112131415'))//1
+console.log(beginning('1112'))//1
