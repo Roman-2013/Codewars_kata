@@ -183,3 +183,50 @@ function sortArray(array) {
         }
     })
 }
+
+//#13
+function order(words){
+    const arr=words.split(' ')
+    const res=[]
+    for (let i = 1; i <=arr.length ; i++) {
+        arr.map(el=>{
+            if(el.includes(`${i}`)){
+                res.push(el)
+            }
+        })
+    }
+    return res.join(' ')
+
+}
+
+//#14
+function getBestWord(points, words) {
+    const obj = {}
+
+    for (let i = 65; i < 91; i++) {
+        obj[String.fromCharCode(i)] = points[i - 65]
+    }
+
+    const res=[]
+
+    for (let i = 0; i <words.length ; i++) {
+        const value=words[i].split('').reduce((acc, el) => obj[el] + acc, 0)
+        res.push({[words[i]]:[value,words[i].length]})
+    }
+
+    let value=res[0]
+    console.log(value[Object.keys(value)][0])
+    for(let key in res){
+        for(let key2 in res[key]){
+
+            if(res[key][key2][0]===value[Object.keys(value)][0] && res[key][key2][1]< value[Object.keys(value)][1]){
+                value=res[key]
+            }else if(res[key][key2][0]>value[Object.keys(value)][0]){
+                value=res[key]
+            }
+            //console.log(res[key][key2][0])
+        }
+    }
+    return words.indexOf(Object.keys(value).join())
+
+}

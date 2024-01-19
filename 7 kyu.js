@@ -398,3 +398,12 @@ function seaSick(x){
     }
     return arr.length*20/100<count?"Throw Up":"No Problem"
 }
+
+//#40
+function covfefe(str) {
+    if (str.includes('coverage')) {
+        return str.replaceAll('coverage', 'covfefe')
+    } else {
+        return str + ' ' + 'covfefe'
+    }
+}
