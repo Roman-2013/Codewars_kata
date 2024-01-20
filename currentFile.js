@@ -1,39 +1,27 @@
-function getBestWord(points, words) {
-    const obj = {}
+function spinAround(turns) {
+   console.log(turns)
+  let res=[]
+   let count360=0
 
-    for (let i = 65; i < 91; i++) {
-        obj[String.fromCharCode(i)] = points[i - 65]
-    }
+   for (let i = 0; i <turns.length ; i++) {
 
-    const res=[]
+      if (turns[i] === 'left') {
+         count360 += -1
+         if ( count360 % 5 === 0) {
+            res.push(count360)
+         }
 
-    for (let i = 0; i <words.length ; i++) {
-        const value=words[i].split('').reduce((acc, el) => obj[el] + acc, 0)
-        res.push({[words[i]]:[value,words[i].length]})
-    }
+      } else {
+         count360 += 1
+         if ( count360 % 5 === 0) {
+            res.push(count360)
+         }
 
-    let value=res[0]
-    console.log(value[Object.keys(value)][0])
-for(let key in res){
-    for(let key2 in res[key]){
-
-       if(res[key][key2][0]===value[Object.keys(value)][0] && res[key][key2][1]< value[Object.keys(value)][1]){
-           value=res[key]
-       }else if(res[key][key2][0]>value[Object.keys(value)][0]){
-           value=res[key]
-       }
-        //console.log(res[key][key2][0])
-    }
-}
-    return words.indexOf(Object.keys(value).join())
-
+      }
+   }
+   return  res
 }
 
-var points = [1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 10, 1, 2, 1, 1, 3, 8, 1, 1, 1, 1, 4, 10, 10, 10, 10];
-var simpleWords = ['WHO', 'IS', 'THE', 'BEST', 'OF', 'US'];
-var rndmWords = ['NOQ', 'TXAY', 'S', 'OM', 'ESFT', 'CJUKQ', 'QL', 'QO', 'ASTK', 'Y'];
-var firstBestWord = ['JGPCWVWFW', 'JXHNKBJJG'];
-console.log(getBestWord(points, simpleWords))//0
-// console.log(getBestWord(points, rndmWords))//5
-// console.log(getBestWord(points, firstBestWord))//5
-console.log(getBestWord(points, [ 'AAA', 'B', 'A', 'E', 'I' ]))//5
+
+//console.log(spinAround(['left', 'right', 'left', 'right']))//0
+console.log(spinAround(['right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right']))
