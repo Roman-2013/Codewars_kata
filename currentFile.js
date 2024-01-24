@@ -1,27 +1,20 @@
-function spinAround(turns) {
-   console.log(turns)
-  let res=[]
-   let count360=0
+function catchSignChange(arr) {
+  let count=0
 
-   for (let i = 0; i <turns.length ; i++) {
+  for (let i = 1; i <=arr.length-1 ; i++) {
 
-      if (turns[i] === 'left') {
-         count360 += -1
-         if ( count360 % 5 === 0) {
-            res.push(count360)
-         }
+    arr[i]===0?arr[i]=1:arr[i]
+    arr[i-1]===0?arr[i-1]=1:arr[i]
 
-      } else {
-         count360 += 1
-         if ( count360 % 5 === 0) {
-            res.push(count360)
-         }
-
-      }
-   }
-   return  res
+    if(arr[i]<=0 && arr[i-1]>0){
+      count+=1
+    }
+    if(arr[i]>=0 && arr[i-1]<0){
+      count+=1
+    }
+  }
+  return  count
 }
 
-
-//console.log(spinAround(['left', 'right', 'left', 'right']))//0
-console.log(spinAround(['right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right', 'right']))
+//console.log(catchSignChange([1,3,4,5])  )//0
+console.log(catchSignChange([-7,-7,7,0])  )//2
