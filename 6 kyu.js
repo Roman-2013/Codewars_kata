@@ -230,3 +230,17 @@ function getBestWord(points, words) {
     return words.indexOf(Object.keys(value).join())
 
 }
+
+
+//#15
+function partsSums(ls) {
+    const res=[]
+    let sum=0
+    let count=ls.length-1
+    ls.map((el,i,array)=>{
+        sum+=array[count-i]
+        res.push(sum)
+    })
+    res.unshift(0)
+    return res.reverse()
+}
