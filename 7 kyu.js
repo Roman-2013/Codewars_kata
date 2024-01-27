@@ -423,3 +423,31 @@ function catchSignChange(arr) {
     }
     return  count
 }
+
+//#42
+function wordValue(a) {
+    const res=[]
+    const findCode=(leter)=>{
+        if(leter===' '){
+            return 0
+        }
+        return leter.charCodeAt()-96
+    }
+    for (let i = 0; i < a.length; i++) {
+        let count=0
+        const array=a[i].split('')
+        array.map(el=>{
+            return count+=findCode(el)
+        })
+        res.push(count*(i+1))
+    }
+    return res
+}
+
+
+function wordValue(a) {
+    return a.map((s,i) => s.replace(/\s/g, '')
+        .split('')
+        .map(b => (b.charCodeAt()-96))
+        .reduce((acc, cur) => (acc+=cur),0)*(i+1));
+}

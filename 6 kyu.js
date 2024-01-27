@@ -244,3 +244,23 @@ function partsSums(ls) {
     res.unshift(0)
     return res.reverse()
 }
+
+//#16
+function isPangram(string){
+    const lowerCaseString=string.toLowerCase()
+    const res={}
+    const array=lowerCaseString.replace(/[^\a-zA-Z]/g,'').split('')
+
+    array.map(el=>{
+        res[el.charCodeAt()-96]=1
+
+    })
+    return Object.keys(res).length===26
+}
+
+
+function isPangram(string){
+    return 'abcdefghijklmnopqrstuvwxyz'
+        .split('')
+        .every((x) => string.toLowerCase().includes(x));
+}
