@@ -444,10 +444,19 @@ function wordValue(a) {
     return res
 }
 
+//43
+const  solution=(start, finish,jumping=0)=> {
 
-function wordValue(a) {
-    return a.map((s,i) => s.replace(/\s/g, '')
-        .split('')
-        .map(b => (b.charCodeAt()-96))
-        .reduce((acc, cur) => (acc+=cur),0)*(i+1));
+    debugger
+
+    if(start===finish){
+        return jumping
+    }
+
+    if(start+3<=finish){
+
+        return solution(start+3,finish,jumping+1)
+    }else {
+        return solution(start+1,finish,jumping+1)
+    }
 }

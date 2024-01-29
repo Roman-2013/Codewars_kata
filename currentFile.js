@@ -1,24 +1,18 @@
-function explode(x){
-const sum=x.reduce((acc,ell)=>{
-  if(typeof ell==='number'){
-     return ell+acc
-  }
-  return 0+acc
-},0)
-  const res=[]
-if(sum===0){
-  return 'Void!'
-}
+const  solution=(start, finish,jumping=0)=> {
 
-  for (let i = 0; i < sum; i++) {
-    res.push(x)
+debugger
+
+  if(start===finish){
+    return jumping
   }
 
+  if(start+3<=finish){
 
-
-  return res
+   return solution(start+3,finish,jumping+1)
+  }else {
+    return solution(start+1,finish,jumping+1)
+  }
 }
 
 
-console.log(explode([9, 3]))// [[9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3], [9, 3]]
-console.log(explode(['a', 3]))// [['a', 3],['a', 3],['a', 3]]
+console.log(solution(1,5))//2
