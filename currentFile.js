@@ -1,18 +1,13 @@
-const  solution=(start, finish,jumping=0)=> {
+function calculator(a,b,sign){
 
-debugger
-
-  if(start===finish){
-    return jumping
+  if(typeof a!=='number' || typeof b!=='number' || !/[+\/*-]/g.test(sign)){
+    return "unknown value"
   }
 
-  if(start+3<=finish){
-
-   return solution(start+3,finish,jumping+1)
-  }else {
-    return solution(start+1,finish,jumping+1)
-  }
+  return `${a}${sign}${b}`
 }
 
 
-console.log(solution(1,5))//2
+console.log(calculator(1,2,"-"))//3
+console.log(calculator(6,"h","*"))//"unknown value"
+console.log(calculator(6,2,"$"))//"unknown value"

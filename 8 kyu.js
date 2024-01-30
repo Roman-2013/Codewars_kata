@@ -286,3 +286,11 @@ function numberToString(num) {
 
 //#34
 const  expressionMatter=(a, b, c)=> Math.max((a*b*c),(a+b+c),(a*(b+c)),((a+b)*c))
+
+//#35
+function calculator(a,b,sign){
+    if(typeof a!=='number' || typeof b!=='number' || !/[+\/*-]/g.test(sign)){
+        return "unknown value"
+    }
+    return eval(`${a}${sign}${b}`)
+}

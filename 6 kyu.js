@@ -259,8 +259,27 @@ function isPangram(string){
 }
 
 
-function isPangram(string){
-    return 'abcdefghijklmnopqrstuvwxyz'
-        .split('')
-        .every((x) => string.toLowerCase().includes(x));
+//#17
+function twoSum(numbers, target) {
+    for (let i = 0; i <numbers.length ; i++) {
+        let currentNumber=numbers[i]
+        for (let j = i+1; j <numbers.length ; j++) {
+            let secondValue=numbers[j]
+            if(currentNumber+secondValue===target){
+                return [i,j]
+            }
+        }
+    }
+}
+
+//#18
+const  duplicateEncode=(word)=>{
+    const array=word.toLowerCase().split('')
+    return array.map((el,index,array)=>{
+        if(array.indexOf(el)===array.lastIndexOf(el)){
+            return '('
+        }else{
+            return ')'
+        }
+    }).join('')
 }

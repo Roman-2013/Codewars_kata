@@ -446,17 +446,23 @@ function wordValue(a) {
 
 //43
 const  solution=(start, finish,jumping=0)=> {
-
-    debugger
-
     if(start===finish){
         return jumping
     }
-
     if(start+3<=finish){
-
         return solution(start+3,finish,jumping+1)
     }else {
         return solution(start+1,finish,jumping+1)
     }
+}
+
+//#44
+function printerError(s) {
+    let  countError=0
+    s.toLowerCase().split('').map(el=>{
+        if(/[n-z]/g.test(el)){
+            countError+=1
+        }
+    })
+    return `${countError}/${s.length}`
 }
