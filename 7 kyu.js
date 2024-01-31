@@ -466,3 +466,27 @@ function printerError(s) {
     })
     return `${countError}/${s.length}`
 }
+
+//#45
+function isSortedAndHow(array) {
+    const arrayPositive = [...array].sort((a, b) => a - b).join('')
+    const arrayNegative = [...array].sort((a, b) => b - a).join('')
+    if (array.join('') === arrayPositive) {
+        return 'yes, ascending'
+    }
+    if (array.join('') === arrayNegative) {
+        return 'yes, descending'
+    }
+    return 'no'
+}
+
+//#46
+function noOdds( values ){
+    const res=[]
+    values.map(el=>{
+        if(el%2 ==0){
+            res.push(el)
+        }
+    })
+    return res
+}

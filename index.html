@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -9,3 +10,137 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+<!--<script>-->
+<!--    let x=0-->
+<!--    function count(){-->
+<!--        let y =0-->
+<!--        getX =() => console.log(x)-->
+
+<!--        getY=() => console.log(y)-->
+<!--        return { inc(){-->
+<!--                x++, y++-->
+<!--            }, getX, getY-->
+<!--        }-->
+<!--    }-->
+<!--    count().inc() //=x1-->
+<!--    count().inc()//x=2-->
+<!--    count().getX()-->
+<!--    count().getY()-->
+<!--</script>-->
+
+
+<!--<script>-->
+<!--    var a=0-->
+<!--    const x = ()=> console.log(this.a)-->
+<!--    x.bind(1).bind(2).bind(3)()-->
+<!--    x()-->
+<!--    function y(){console.log(this.a)}-->
+<!--    y.bind(1).bind(2).bind(3)()-->
+<!--    y()-->
+<!--    //0-->
+<!--    //0-->
+<!--    //1-->
+<!--    //0-->
+<!--</script>-->
+
+
+
+<!--console.log(typeof Object)-->
+<!--console.log(typeof Date)-->
+<!--console.log(typeof null)-->
+<!--console.log(typeof 1n)-->
+<!--console.log(typeof new String())-->
+<!--console.log(typeof new Function())-->
+<!--console.log(typeof NaN)-->
+<!--console.log(typeof [])-->
+<!--console.log(typeof console.log(1))-->
+<!--console.log(typeof (typeof {}))-->
+
+
+<!--<script>-->
+<!--    class A{-->
+<!--        a=1-->
+<!--        x(){-->
+<!--            console.log(this.a)-->
+<!--        }-->
+<!--        y=() => {-->
+<!--            console.log(this.a)-->
+<!--        }-->
+<!--    }-->
+<!--    const a = new A()-->
+<!--    a.x()-->
+<!--    a.y()-->
+<!--    const obj ={-->
+<!--        a:1,-->
+<!--        x(){-->
+<!--            console.log(this.a)-->
+<!--        },-->
+<!--        y:() => {-->
+<!--            console.log(this.a)-->
+<!--        }-->
+
+<!--    }-->
+<!--    obj.x()-->
+<!--    obj.y()-->
+<!--</script>-->
+<!--<script>-->
+<!--    setTimeout(()=>{-->
+<!--        console.log(1)-->
+<!--    },0)-->
+<!--    let p = new Promise((resolve, reject) => {-->
+<!--        console.log(2)-->
+<!--    })-->
+<!--    p.then(()=>console.log(3))-->
+<!--    setTimeout(()=>{-->
+<!--        console.log(4)-->
+<!--    },1)-->
+<!--    console.log(5)-->
+<!--</script>-->
+
+
+<!--<script>-->
+<!--    let p = new Promise((resolve, reject) => {-->
+<!--        console.log(1)-->
+<!--        setTimeout(() => {  resolve(2); }, 1000); });-->
+<!--    p.then(result=>console.log(result))-->
+<!--    setTimeout(()=>{-->
+<!--        console.log(3)-->
+<!--    },1000)-->
+<!--    setTimeout(()=>{-->
+<!--        console.log(4)-->
+<!--    },500)-->
+<!--</script>-->
+
+
+<!--Promise.allSettled([p1, p2]).catch((error) => {-->
+<!--console.log('My errer' + error);-->
+<!--}).then((result) => {-->
+<!--console.log(result[1].status);-->
+<!--});-->
+<!--</script>-->
+
+
+
+
+<!--<script>-->
+<!--    const p1 = new Promise((resolve, reject) => {-->
+<!--        throw new Error('Uh-oh!');-->
+<!--    });-->
+<!--    const p2 = new Promise((resolve, reject) => {-->
+<!--        resolve("p2 ok");-->
+<!--    });-->
+
+<!--    Promise.allSettled([p1, p2]).catch((error) => {-->
+<!--        console.log('My errer' + error);-->
+<!--    }).then((result) => {-->
+<!--        console.log(JSON.stringify(result));-->
+<!--    });-->
+<!--</script>-->

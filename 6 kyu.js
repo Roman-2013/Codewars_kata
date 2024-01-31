@@ -283,3 +283,10 @@ const  duplicateEncode=(word)=>{
         }
     }).join('')
 }
+
+//#19
+function alphabetPosition(text) {
+    const arrNumber = text.toLowerCase().match(/[a-z]/g)
+    return arrNumber?.map(el => el.charCodeAt() - 96).join(' ') || ''
+}
+
