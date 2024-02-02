@@ -290,3 +290,18 @@ function alphabetPosition(text) {
     return arrNumber?.map(el => el.charCodeAt() - 96).join(' ') || ''
 }
 
+
+//#20
+function dataReverse(data) {
+    let res = []
+    let eightLeter = []
+    for (let i = 0; i <= data.length; i++) {
+        if (eightLeter.length === 8) {
+            res=[...eightLeter,...res]
+            eightLeter = []
+        }
+        eightLeter.push(data[i])
+    }
+    return res
+}
+

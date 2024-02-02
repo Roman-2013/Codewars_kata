@@ -490,3 +490,28 @@ function noOdds( values ){
     })
     return res
 }
+
+//#47
+function findDeletedNumber(arr, mixArr) {
+    let res=0
+    for (let i = 0; i < arr.length; i++) {
+        if(!mixArr.includes(arr[i])){
+            res+=arr[i]
+        }
+    }
+    return res
+}
+
+//#48
+const binaryArrayToNumber = arr => {
+    const sting=+arr.join('')
+    console.log(sting)
+    let i=0
+    console.log( +i.toString(2))
+    while (sting !== +i.toString(2)){
+        debugger
+        i+=1
+    }
+    return i
+};
+

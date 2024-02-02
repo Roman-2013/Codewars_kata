@@ -294,3 +294,13 @@ function calculator(a,b,sign){
     }
     return eval(`${a}${sign}${b}`)
 }
+
+
+//#36
+function monkeyCount(n) {
+    const res=[]
+    for (let i = 1; i <= n; i++) {
+        res.push(i)
+    }
+    return res
+}
