@@ -515,3 +515,6 @@ const binaryArrayToNumber = arr => {
     return i
 };
 
+
+//#49
+const checkCoupon = (enteredCode, correctCode, currentDate, expirationDate) => enteredCode !== correctCode ? false : new Date(currentDate) > new Date(expirationDate) ? false : true

@@ -305,3 +305,24 @@ function dataReverse(data) {
     return res
 }
 
+//#21
+function encode(string) {
+    const obj = {a: 1, e: 2, i: 3, o: 4, u: 5}
+    const array = string.split('')
+    for (let i = 0; i < array.length; i++) {
+        if (obj[array[i]]) {
+            array[i] = obj[array[i]]
+        }
+    }
+    return array.join('')
+}
+function decode(string) {
+    const obj = {1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u'}
+    const array = string.split('')
+    for (let i = 0; i < array.length; i++) {
+        if (obj[array[i]])
+            array[i] = obj[array[i]]
+    }
+    return array.join('')
+}
+
