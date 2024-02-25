@@ -326,3 +326,29 @@ function decode(string) {
     return array.join('')
 }
 
+//#22
+const prizeCounter = (s) => {
+    let sum = 0
+    let count = 0
+    let current = ''
+    let three = ''
+    for (let i = 0; i < s.length; i++) {
+        if (three === s[i]) {
+            current=s[i]
+            continue
+        }
+        if (current === s[i]) {
+            count += 1
+            sum += 100
+            if (count === 3) {
+                s[i] === 'R' ? sum += 500 : s[i] === 'B' ? sum += 300 : sum += 200
+                three = s[i]
+            }
+        } else {
+            sum += 100
+            current = s[i]
+            count = 1
+        }
+    }
+    return sum
+}

@@ -518,3 +518,38 @@ const binaryArrayToNumber = arr => {
 
 //#49
 const checkCoupon = (enteredCode, correctCode, currentDate, expirationDate) => enteredCode !== correctCode ? false : new Date(currentDate) > new Date(expirationDate) ? false : true
+
+//#50
+function explode(x){
+    const res=[]
+    let sum=0
+    if(typeof x[0]=== 'string' && typeof x[1]=== 'string'){
+        return 'Void!'
+    }
+    x.map(el=>{
+        if(Number(el)){
+            sum+=el
+        }
+    })
+
+
+    for (let i = 0; i < sum; i++) {
+        res.push(x)
+    }
+    return res
+}
+
+//#51
+function spinAround(turns) {
+    if (turns.length < 4) {
+        return 0
+    }
+    let count = 0
+    for (let i = 0; i < turns.length; i++) {
+        if(turns[i]==='right')count+=1
+        if(turns[i]==='left')count-=1
+
+    }
+    return Math.floor(Math.abs(count)/4);
+
+}

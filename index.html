@@ -11,12 +11,6 @@
 </html>
 
 
-
-
-
-
-
-
 <!--<script>-->
 <!--    let x=0-->
 <!--    function count(){-->
@@ -51,17 +45,16 @@
 <!--</script>-->
 
 
-
-<!--console.log(typeof Object)-->
-<!--console.log(typeof Date)-->
-<!--console.log(typeof null)-->
-<!--console.log(typeof 1n)-->
-<!--console.log(typeof new String())-->
-<!--console.log(typeof new Function())-->
-<!--console.log(typeof NaN)-->
-<!--console.log(typeof [])-->
-<!--console.log(typeof console.log(1))-->
-<!--console.log(typeof (typeof {}))-->
+<!--console.log(typeof Object) //function-->
+<!--console.log(typeof Date) //function-->
+<!--console.log(typeof null) //object-->
+<!--console.log(typeof 1n) //begin-->
+<!--console.log(typeof new String())//object-->
+<!--console.log(typeof new Function())//function-->
+<!--console.log(typeof NaN)//number-->
+<!--console.log(typeof [])//object-->
+<!--console.log(typeof console.log(1))//undefined-->
+<!--console.log(typeof (typeof {}))//string&ndash;&gt;-->
 
 
 <!--<script>-->
@@ -127,8 +120,6 @@
 <!--</script>-->
 
 
-
-
 <!--<script>-->
 <!--    const p1 = new Promise((resolve, reject) => {-->
 <!--        throw new Error('Uh-oh!');-->
@@ -143,3 +134,23 @@
 <!--        console.log(JSON.stringify(result));-->
 <!--    });-->
 <!--</script>-->
+
+
+<!--for (let i = 0; i < 3; i++) {-->
+<!--setTimeout(() => {-->
+<!--console.log(i)-->
+<!--}, 1)-->
+<!--}-->
+
+
+<!--let obj={-->
+<!--a:1,-->
+<!--b:"str",-->
+<!--c:true,-->
+<!--d:undefined,-->
+<!--e:Symbol(),-->
+<!--f:null,-->
+<!--g:Date-->
+<!--}-->
+<!--let x=JSON.stringify(obj)-->
+<!--console.log(JSON.parse(x))-->
