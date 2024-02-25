@@ -307,3 +307,20 @@ function monkeyCount(n) {
 
 //#37
 const  multiply=(number)=>number*5**(Math.abs(number).toString().length)
+
+//#38
+function printArray(array){
+    return array.toString()
+}
+
+//#39
+function sumMul(n,m){
+    if(n==m || m<n)return "INVALID"
+    let res=0
+    debugger
+    for (let i = n; i < m; i++) {
+        if(i%n===0)res+=i
+    }
+    return res
+
+}

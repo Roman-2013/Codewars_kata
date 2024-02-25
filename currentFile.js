@@ -1,6 +1,12 @@
-function beginning(xs) {
-    return 0;
+function sumMul(n,m){
+    if(n==m || m<n)return "INVALID"
+let res=0
+debugger
+    for (let i = n; i < m; i++) {
+        if(i%n===0)res+=i
+    }
+return res
+
 }
 
-console.log(Number('1'+'2'))
-console.log(beginning("123456789101112131415"))
+console.log(sumMul(2,9))

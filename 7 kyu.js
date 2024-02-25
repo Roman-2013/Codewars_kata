@@ -553,3 +553,30 @@ function spinAround(turns) {
     return Math.floor(Math.abs(count)/4);
 
 }
+
+//#52
+function isAllPossibilities(x) {
+    const arraySort = x.sort((a, b) => a - b)
+    debugger
+    let res = false
+    for (let i = 0; i < arraySort.length; i++) {
+        if (i === arraySort[i]) {
+            res = true
+        } else {
+            return false
+        }
+    }
+    return res
+}
+
+//#53
+function factorial(n) {
+    console.log(n)
+    if(n===0)return 1
+    if(n<0 ||n>12)   throw RangeError(n)
+    let res=1
+    for (let i = 1; i <= n; i++) {
+        res*=i
+    }
+    return res
+}
